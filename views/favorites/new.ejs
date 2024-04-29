@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favorites page</title>
+</head>
+<body>
+    
+    <h1>Browse, add, update, your favorite Chelsea players or even delete players you don't like!</h1>
+    <form action="/favorites" method=post>
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="player-name" />
+
+        <label for="position">Position:</label>
+        <input type="text" name="position" id="position" />
+
+        <label for="appearances"># of appearances:</label>
+        <input type="number" name="appearances" id="appearances" />
+
+        <label for="goals"># of goals scored:</label>
+        <input type="number" name="goals" id="goals" />
+
+        <label for="img">Upload a picture here!</label>
+        <input type="text" name="img" id="playerimg" />
+
+        <button type="submit">Add Player</button>
+    </form>
+</body>
+</html>
