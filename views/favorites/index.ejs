@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <%- include('../partials/nav.ejs') %>
+    <h1>This is the index of everybodies favorite Chelsea players!</h1>
+    <% players.forEach(player => { %>
+     <ul>
+        <li><a href="/favorites/<%= player._id %>"><%= player.name %></a>  Position: <%= player.position %> Goals scored: <%= player.goals %> # of appearances: <%= player.appearances %></li>
+        <img src="<%= player.playerimg %>">
+     </ul>
+    <% }) %>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit <%= players.name %></title>
+</head>
+<body>
+    <%- include('../partials/nav.ejs') %>
+    <h1>Edit the entry for <%= players.name  %></h1>
+    <form action="/favorites/<%= players._id %>?_method=PUT" method="POST">
+        <label for="name">Name: </label>
+        <input type="text" name="name" id="name" value="<%= players.name %>">
+
+        <label for="position">Position: </label>
+        <input type="text" name="position" id="position" value="<%= players.position %>">
+
+        <label for="appearances"># of appearances: </label>
+        <input type="text" name="appearances" id="appearances" value="<%= players.appearances %>"/>
+
+        <label for="goals">Goals scored: </label>
+        <input type="number" name="goals" id="goals" value="<%= players.goals %>">
+
+        <button type="submit">Submit Edit</button>
+    </form>
+</body>
+</html>

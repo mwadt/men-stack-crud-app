@@ -5,7 +5,7 @@ const playerSchema = new mongoose.Schema({
     position: String,
     appearances: Number,
     goals: Number,
-    image: String
+    img: String
 
 })
 

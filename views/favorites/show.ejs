@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= players.name %></title>
+</head>
+<body>
+    <%- include('../partials/nav.ejs') %>
+    <h1> <%= players.name %></h1>
+    <ul>
+        <li>Position: <%= players.position %></li>
+        <li>Goals scored: <%= players.goals %></li>
+        <li># of appearances for Chelsea: <%= players.appearances %></li>
+    </ul>
+
+    <form action="/favorites/<%= players._id%>?_method=DELETE" method=post>
+        <button type="submit">Delete <%= players.name %></button>
+    </form>
+
+   
+    <a href="/favorites/<%= players._id%>/edit">Edit <%= players.name %></a>
+        
+    
+    
+</body>
+</html>
+

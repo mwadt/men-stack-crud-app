@@ -6,7 +6,7 @@
     <title>Favorites page</title>
 </head>
 <body>
-    
+    <%- include('../partials/nav.ejs') %>
     <h1>Browse, add, update, your favorite Chelsea players or even delete players you don't like!</h1>
     <form action="/favorites" method=post>
         <label for="name">Name:</label>
@@ -21,8 +21,7 @@
         <label for="goals"># of goals scored:</label>
         <input type="number" name="goals" id="goals" />
 
-        <label for="img">Upload a picture here!</label>
-        <input type="text" name="img" id="playerimg" />
+        
 
         <button type="submit">Add Player</button>
     </form>
